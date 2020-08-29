@@ -1,6 +1,6 @@
 # branch 전략 (Git-Flow, Git-Workflow, Gitlab-Workflow)
 
-## (1) Git-Flow
+### (1) Git-Flow
 
 브랜치를 크게 `메인 브랜치(Main branch)`, `피처 브랜치(Feature branch) 혹은 토픽 브랜치(Topic branch)`, `릴리스 브랜치(Release branch)`, `핫픽스 브랜치(Hotfix branch)`와 같이 4가지로 나누어 개발하는 전략을 일컫는다. 
 
@@ -24,7 +24,7 @@ Git-Flow 전략은 주기적으로 배포를 해야하는 프로젝트에는 적
 
 <br>
 
-## (2) Git-Workflow
+### (2) Git-Workflow
 
 `Git-Flow`의 흐름을 이어가되, 언제나 배포 가능한 빌드를 만들기 위한 방안으로 등장한 브랜치 전략이다. Git-Flow가 배포를 위한 `release` 브랜치를 따로 두고 집중적으로 테스트를 하는 것과 달리, Git-Workflow는 `commit`이나 `feautre` 브랜치에서 테스트를 완료하고 PR(Pull Request)와 Code Review를 거쳐 곧바로 `master` 브랜치에 merge하는 방식이다.
 
@@ -32,7 +32,7 @@ Git-Flow 전략은 주기적으로 배포를 해야하는 프로젝트에는 적
 
 <br>
 
-## (3) Gitlab-Workflow
+### (3) Gitlab-Workflow
 
 Github에서 말하는 `Git-Flow` 전략에서 발생할 수 있는 문제들을 보완하기 위해 등장했다. 대부분의 흐름은 Git-Flow 전략과 유사하지만, `develop`와 `staging`, `production` 브랜치를 항시 유지시킨다는 차이점이 있다. 각 브랜치는 아래와 같은 역할을 수행한다.
 
@@ -44,9 +44,9 @@ Github에서 말하는 `Git-Flow` 전략에서 발생할 수 있는 문제들을
 
 <br>
 
-## 총평
+### 총평
 
-아무래도 시간의 흐름에 따라 기존의 브랜치 전략의 단점을 보완하기 위해 발전된 형태이기 때문에 `gitlab workflow`가 효율적이라고 생각된다. 특히 agile이 강조되는 요즘 분위기 속에서 git-flow는 비효율적이라고 생각되고, 많이 선호되지도 않을 것 같다.
+아무래도 시간의 흐름에 따라 기존의 브랜치 전략의 단점을 보완하기 위해 발전된 형태이기 때문에 `gitlab workflow`가 효율적이라고 생각된다. 특히 agile이 강조되는 요즘 분위기 속에서 `git-flow`는 비효율적이라고 생각되고, 많이 선호되지도 않을 것 같다.
 
 학부에서 진행하는 아기자기한 프로젝트도 커뮤니케이션이 원활하지 않아 git conflict가 일어나는 경우가 아주 많았다. 이러한 브랜치 전략에 대해 처음으로 공부해봤는데, 이렇게 체계적으로 룰을 정하고 세세하게 관리함으로써 불필요한 커뮤니케이션은 줄이고 업무의 효율을 극대화할 수 있을 것이라고 생각한다.
 
