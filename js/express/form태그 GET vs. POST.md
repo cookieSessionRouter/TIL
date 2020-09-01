@@ -77,4 +77,5 @@ app.post("/email_post", function (req, res) {
 });
 ```
 <br>
-제대로 request가 온 것을 확인했다면 post 메서드를 통해 날라온 데이터를 어떻게 처리해야 하는지 살펴봐야 한다. 말이 길어지고 새롭게 md를 파도 되겠다 싶은 굵직한 내용이라 새로운 md파일을 만들었다.
+
+제대로 request가 온 것을 확인했다면 post 메서드를 통해 날라온 데이터를 어떻게 처리해야 하는지 살펴봐야 한다. 말이 길어지고 새롭게 md를 파도 되겠다 싶은 굵직한 내용이라 [새로운 md파일](https://github.com/Mong-Gu/TIL/blob/master/js/express/post%EB%B0%A9%EC%8B%9D%EC%9D%98%20form%20%ED%83%9C%EA%B7%B8%EB%A1%9C%EB%B6%80%ED%84%B0%20%EB%82%A0%EB%9D%BC%EC%98%A8%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%B2%98%EB%A6%AC%20%EB%B0%A9%EB%B2%95.md)을 만들었다.
