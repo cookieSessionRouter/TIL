@@ -136,7 +136,7 @@ console.log(weather);
 <br>
 
 ### 총정리
-![](./photos/var,let,const.PNG)
+![](../images/var,let,const.PNG)
 
 <br>
 

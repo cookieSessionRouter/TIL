@@ -11,7 +11,7 @@
   $ npm i -D -g jest
   ```
 
-  ![](./photos/jest설치.png)
+  ![](../images/jest설치.png)
 
 <br>
 
