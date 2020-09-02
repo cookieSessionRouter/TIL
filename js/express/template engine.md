@@ -20,7 +20,7 @@
 1. 먼저 아래 명령어를 통해 express에게 "view engine은 pug로 쓸 거야!" 라고 알려준다.
 
    ```javascript
-   # app.js
+   // app.js
    ...
    app.set('view engine', 'pug');
    ...
@@ -31,8 +31,8 @@
 2. 이후 아래 명령어를 통해 express에게 "views로 이용할 디렉토리는 이거야!" 라고 알려준다.<br>
    여기서 views로 사용한 디렉토리는 `__dirname`, 즉 상위 디렉토리를 모두 포함한 현재 경로이다.
 
-   ```
-   # app.js
+   ```javascript
+   // app.js
    ...
    const path = require("path");
    ...
