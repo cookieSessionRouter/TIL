@@ -13,5 +13,53 @@
 일단 가장 흔히들 많이 쓰는 것이 `ejs`인 것 같다. crong님이 멤버쉽 맨 처음 날 "ejs는 공부 안 해도 쉽게 사용할 수 있는데 pug는 공부좀 해봐야 한다. 이번 기회에 pug를 공부해 보자."라고 하셨던 게 기억난다.<br>
 
 근데 공식 문서에 Guide 중 [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html)를 보면 `pug`를 예시로 들어서 설명해줬다. 일단 pug로 진행해보자. 어찌 되었든 큰 맥락은 같을 것 같다. (`app.set`을 쓴다던가, `res.send`가 아닌 `res.render`를 해준다던가, `views` 디렉토리 하위에 템플릿들을 넣어준다던가 등등) 궁금한 것은 왜 이렇게 많은 템플릿 엔진이 있냐는 것이다. 이런 것도 찾아봐야 하는데 정말 세상에... 할 게 너무 많은 것 같다. 에휴.<br>
+<br>
 
-이후의 내용은... 아침에 일어나서 이어서 하자. 죽을 것 같아ㅏㅏㅏ................:cry:
+### template engine 사용법 (feat. pug)
+
+1. 먼저 아래 명령어를 통해 express에게 "view engine은 pug로 쓸 거야!" 라고 알려준다.
+
+   ```javascript
+   # app.js
+   ...
+   app.set('view engine', 'pug');
+   ...
+   ```
+
+<br>
+
+2. 이후 아래 명령어를 통해 express에게 "view로 이용할 디렉토리는 이거야!" 라고 알려준다.
+
+   ```
+   ?
+   ```
+
+   좀 더 찾아보고 쓰자.
+
+<br>
+
+3. 아래 명령어를 통해 pug에 특정 내용을 뿌려준다.
+
+   ```javascript
+   app.get("/", function (req, res) {
+     res.render("index", { title: "Hey", message: "Hello there!" });
+   });
+   ```
+
+   - `res.send`가 아닌 `res.render`를 쓴다는 것이며, 이 또한 `res.send`와 마찬가지로 정상적인 경우 status가 `200 OK`이다.
+
+   - `res.render` 명령어에 대한 설명
+     - 첫 번째 인자 : 타겟 pug파일. 확장자 `.pug`는 생략 가능.
+     - 두 번째 인자 : 타겟 데이터. 오브젝트 형태로 뿌려주게 된다.
+
+<br>
+
+4. 3번에서는 임의의 데이터를 뿌려줬다. 만약 post방식의 form으로부터 전달 받은 데이터를 뿌려주게 된다면?
+
+   ```javascript
+   app.post("/email_post", function (res, req) {
+     res.render("email.pug", { email: req.body.email });
+   });
+   ```
+
+   위와 같이 전달하고자 하는 오브젝트의 'email'이라는 key의 value로, `req.body.email`에 담겨 있는 `test@naver.com`을 전달해줄 수 있다.
