@@ -32,7 +32,12 @@
    여기서 views로 사용한 디렉토리는 `__dirname`, 즉 상위 디렉토리를 모두 포함한 현재 경로이다.
 
    ```
+   # app.js
+   ...
+   const path = require("path");
+   ...
    app.set("views", path.join(__dirname, "views"));
+   ...
    ```
 
 <br>
